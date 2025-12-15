@@ -44,6 +44,14 @@ public class ShoppingCartTest {
         assertEquals(108.0, discounted);
     }
 
+    @Test
+    public void testCalculateDiscountedTotal_ExactOneHundred() {
+        ShoppingCart cart = new ShoppingCart();
+        cart.addItem("Gold", 100.0);
+        assertEquals(100.0, cart.getTotalWithDiscount(), 0.01);
+    }
+
+
 //    @Test
 //    public void testUpdateItemPrice_ShouldChangePrice() {
 //        ShoppingCart cart = new ShoppingCart();
