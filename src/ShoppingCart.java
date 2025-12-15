@@ -36,6 +36,8 @@ public class ShoppingCart {
         return items.size();
     }
 
-    public void updateItemPrice(String name, int newPrice) {}
+    public void updateItemPrice(String name, double newPrice) {
+        items.replace(name, newPrice);
+    }
 
 }
