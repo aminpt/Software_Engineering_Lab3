@@ -23,16 +23,16 @@ public class ShoppingCartTest {
     }
 
 
-    @Test
-    public void testDiscountAtBoundary_WRONG() {
-        ShoppingCart cart = new ShoppingCart();
-        cart.addItem("A", 40);
-        cart.addItem("B", 60);
-
-        double discounted = cart.getTotalWithDiscount();
-
-        assertEquals(90.0, discounted);
-    }
+//    @Test
+//    public void testDiscountAtBoundary_WRONG() {
+//        ShoppingCart cart = new ShoppingCart();
+//        cart.addItem("A", 40);
+//        cart.addItem("B", 60);
+//
+//        double discounted = cart.getTotalWithDiscount();
+//
+//        assertEquals(90.0, discounted);
+//    }
 
     @Test
     public void testDiscountAboveThreshold() {
@@ -59,7 +59,7 @@ public class ShoppingCartTest {
         cart.addItem("Book", 50);
         cart.updateItemPrice("Book", 80);
 
-        assertEquals(80.0, cart.getTotal()); // باید مجموع تغییر کند
+        assertEquals(80.0, cart.getTotal());
     }
 
     @Test
