@@ -85,6 +85,12 @@ public class ShoppingCartTest {
     }
 
     // added tests for increasing coverage
+
+    /**
+     * Ensures removeItem returns false when the item is missing,
+     * covering the 'false' branch of the contain check and line 17.
+     */
+
     @Test
     public void testRemoveItem_ItemNotFound_ShouldReturnFalse() {
         ShoppingCart cart = new ShoppingCart();
@@ -94,6 +100,11 @@ public class ShoppingCartTest {
         assertFalse(removed);
         assertEquals(1, cart.getItemCount());
     }
+
+    /**
+     * Tests basic getters of the Item class to ensure the model
+     * has 100% coverage.
+     */
 
     @Test
     public void testItemClass_BasicFunctionality() {
