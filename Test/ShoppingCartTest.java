@@ -1,3 +1,4 @@
+import org.junit.Ignore;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -23,16 +24,17 @@ public class ShoppingCartTest {
     }
 
 
-//    @Test
-//    public void testDiscountAtBoundary_WRONG() {
-//        ShoppingCart cart = new ShoppingCart();
-//        cart.addItem("A", 40);
-//        cart.addItem("B", 60);
-//
-//        double discounted = cart.getTotalWithDiscount();
-//
-//        assertEquals(90.0, discounted);
-//    }
+    @Disabled
+    @Test
+    public void testDiscountAtBoundary_WRONG() {
+        ShoppingCart cart = new ShoppingCart();
+        cart.addItem("A", 40);
+        cart.addItem("B", 60);
+
+        double discounted = cart.getTotalWithDiscount();
+
+        assertEquals(90.0, discounted);
+    }
 
     @Test
     public void testDiscountAboveThreshold() {
