@@ -84,4 +84,21 @@ public class ShoppingCartTest {
         assertEquals(30.0, cart.getTotal());
     }
 
+    // added tests for increasing coverage
+    @Test
+    public void testRemoveItem_ItemNotFound_ShouldReturnFalse() {
+        ShoppingCart cart = new ShoppingCart();
+        cart.addItem("Book", 50);
+        boolean removed = cart.removeItem("Pen");
+
+        assertFalse(removed);
+        assertEquals(1, cart.getItemCount());
+    }
+
+    @Test
+    public void testItemClass_BasicFunctionality() {
+        Item item = new Item("Laptop", 1200.0);
+        assertEquals("Laptop", item.getName());
+        assertEquals(1200.0, item.getPrice());
+    }
 }
